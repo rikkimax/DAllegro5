@@ -9,13 +9,13 @@
     <PreferOneStepBuild>True</PreferOneStepBuild>
     <UseDefaultCompiler>True</UseDefaultCompiler>
     <IncrementalLinking>True</IncrementalLinking>
-    <Compiler>DMD</Compiler>
+    <Compiler>DMD2</Compiler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
     <OutputPath>bin\Debug</OutputPath>
     <Externalconsole>True</Externalconsole>
-    <Target>Executable</Target>
+    <Target>StaticLibrary</Target>
     <OutputName>DAllegro5</OutputName>
     <UnittestMode>False</UnittestMode>
     <ObjectsDirectory>obj\Debug</ObjectsDirectory>
@@ -44,7 +44,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="allegro5\allegro.d" />
-    <Compile Include="allegro5\al_time.d" />
     <Compile Include="allegro5\base.d" />
     <Compile Include="allegro5\system.d" />
     <Compile Include="allegro5\threads.d" />
@@ -77,5 +76,10 @@
     <Compile Include="allegro5\allegro_primitives.d" />
     <Compile Include="allegro5\allegro_ttf.d" />
     <Compile Include="allegro5\allegro_image.d" />
+    <Compile Include="allegro5\allegro_memfile.d" />
+    <Compile Include="allegro5\altime.d" />
+    <Compile Include="allegro5\bitmap_draw.d" />
+    <Compile Include="allegro5\bitmap_lock.d" />
+    <Compile Include="allegro5\drawing.d" />
   </ItemGroup>
 </Project>
