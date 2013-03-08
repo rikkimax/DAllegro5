@@ -41,7 +41,8 @@ extern (C)
 
 	void al_put_pixel(int x, int y, ALLEGRO_COLOR color);
 	void al_put_blended_pixel(int x, int y, ALLEGRO_COLOR color);
-
+	ALLEGRO_COLOR al_get_pixel(ALLEGRO_BITMAP* bitmap, int x, int y);
+	
 	/* Masking */
 	void al_convert_mask_to_alpha(ALLEGRO_BITMAP* bitmap, ALLEGRO_COLOR mask_color);
 
