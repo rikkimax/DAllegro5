@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{24BDF9CB-1F62-49EB-972C-E35A65168EF2}</ProjectGuid>
@@ -11,7 +11,7 @@
     <IncrementalLinking>True</IncrementalLinking>
     <Compiler>DMD2</Compiler>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
     <DebugSymbols>True</DebugSymbols>
     <OutputPath>bin\Debug</OutputPath>
     <Externalconsole>True</Externalconsole>
@@ -22,7 +22,7 @@
     <DebugLevel>0</DebugLevel>
     <ExtraCompilerArguments>-m64</ExtraCompilerArguments>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
     <OutputPath>bin\Release</OutputPath>
     <Externalconsole>True</Externalconsole>
     <Target>StaticLibrary</Target>
@@ -32,7 +32,42 @@
     <DebugLevel>0</DebugLevel>
     <ExtraCompilerArguments>-w -m64</ExtraCompilerArguments>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|x64' ">
+    <DebugSymbols>True</DebugSymbols>
+    <OutputPath>bin\Unittest</OutputPath>
+    <Externalconsole>True</Externalconsole>
+    <Target>Executable</Target>
+    <OutputName>DAllegro5</OutputName>
+    <UnittestMode>True</UnittestMode>
+    <ObjectsDirectory>obj\Unittest</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <Externalconsole>True</Externalconsole>
+    <Target>StaticLibrary</Target>
+    <OutputName>DAllegro5</OutputName>
+    <UnittestMode>False</UnittestMode>
+    <ObjectsDirectory>obj\Debug</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release</OutputPath>
+    <Externalconsole>True</Externalconsole>
+    <Target>StaticLibrary</Target>
+    <OutputName>DAllegro5</OutputName>
+    <UnittestMode>False</UnittestMode>
+    <ObjectsDirectory>obj\Release</ObjectsDirectory>
+    <DebugLevel>0</DebugLevel>
+    <ExtraCompilerArguments>-w</ExtraCompilerArguments>
+    <VersionIds>
+      <VersionIds>
+        <String>ALLEGRO_NO_PRAGMA_LIB</String>
+      </VersionIds>
+    </VersionIds>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unittest|x86' ">
     <DebugSymbols>True</DebugSymbols>
     <OutputPath>bin\Unittest</OutputPath>
     <Externalconsole>True</Externalconsole>
